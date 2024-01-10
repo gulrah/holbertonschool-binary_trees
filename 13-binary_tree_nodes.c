@@ -1,28 +1,27 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_size - Measures the size of a binary tree
+ * binary_tree_nodes - Counts nodes with at least one child in a binary tree
  *
- * @tree: Pointer to the root node of the tree to measure the size
+ * @tree: Pointer to the root node of the tree to count the nodes
  *
- * Return: Size of the binary tree, or 0 if tree is NULL
+ * Return: Number of nodes with at least one child, or 0 if tree is NULL
  */
-size_t binary_tree_size(const binary_tree_t *tree)
+size_t binary_tree_nodes(const binary_tree_t *tree)
 {
-    size_t left_size, right_size;
+    size_t left_nodes, right_nodes;
 
-    /* Check if the tree is empty (NULL) */
+    /* Base Case: If the tree is empty (NULL), return 0 */
     if (tree == NULL)
         return 0;
 
-    /* If the current node is a leaf node (no children), return 1 */
-    if (tree->left == NULL && tree->right == NULL)
-        return 1;
+    /* Recursive Case: Compute the number of nodes in the left and right subtrees */
+    left_nodes = binary_tree_nodes(tree->left);
+    right_nodes = binary_tree_nodes(tree->right);
 
-    /* Recursively compute the size of the left and right subtrees */
-    left_size = binary_tree_size(tree->left);
-    right_size = binary_tree_size(tree->right);
-
-    /* Return the total size, which is the sum of the sizes of left and right subtrees, plus 1 for the current node */
-    return left_size + right_size + 1;
+    /* If the current node has at least one child, add 1 to the total count */
+    if (tree->left != NULL || tree->right != NULL)
+        return left_nodes + right_nodes + 1;
+    else
+        return left_nodes + right_nodes;
 }
