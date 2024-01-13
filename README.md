@@ -13,12 +13,10 @@ This project focuses on the implementation and manipulation of binary trees in t
 5. [Max Binary Heap](#max-binary-heap)
 6. [Requirements](#requirements)
 7. [Usage](#usage)
-8. [File Structure](#file-structure)
-9. [Coding Style](#coding-style)
-10. [Testing](#testing)
-11. [Contributing](#contributing)
-12. [License](#license)
-
+8. [Coding Style](#coding-style)
+9. [Testing](#testing)
+10. [Contributing](#contributing)
+11. [Authors](#authors)
 ## Introduction
 
 A binary tree is a hierarchical data structure consisting of nodes, where each node has at most two children: left and right. The structure of a binary tree provides efficient storage and retrieval of data.
@@ -54,3 +52,22 @@ To use the functions implemented in this project, include the `binary_trees.h` h
 
 ```c
 #include "binary_trees.h"
+```
+
+## Coding Style
+
+The code follows the Betty style guide. Use the provided `betty-style.pl` and `betty-doc.pl` scripts to check for compliance.
+
+## Testing
+
+A `main.c` file is provided as an example to test the functions. You may use your own test cases or modify the existing ones for testing.
+
+## Contributing
+
+Contributions to the project are welcome. If you find any issues or have improvements, feel free to create a pull request.
+
+## Authors
+
+Gulnar Rahimli & Saleh Shahverdiyev.
+
+
