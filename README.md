@@ -68,6 +68,6 @@ Contributions to the project are welcome. If you find any issues or have improve
 
 ## Authors
 
-Gulnar Rahimli and Saleh Shahverdiyev
+Gulnar Rahimli & Saleh Shahverdiyev.
 
 
